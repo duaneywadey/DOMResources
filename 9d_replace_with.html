@@ -51,21 +51,24 @@
 
 	<div id="box">
 		<h2>Test Box</h2>
-		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi corrupti quidem eveniet odio sapiente architecto necessitatibus laborum doloribus facere! Facere tenetur vero pariatur dicta eius, aliquid nihil similique reprehenderit. Necessitatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur, illum? Quisquam in exercitationem blanditiis beatae odio commodi error, officiis placeat! A ducimus consequatur atque similique molestiae autem nulla laborum!</p>
+		<p>First - Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Animi suscipit nam nesciunt voluptate obcaecati repellat ullam itaque! Enim aperiam voluptates, illum dolorem asperiores! Deleniti expedita praesentium maxime quia qui quisquam?</p>
+		<p>Second - Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Animi suscipit nam nesciunt voluptate obcaecati repellat ullam itaque! Enim aperiam voluptates, illum dolorem asperiores! Deleniti expedita praesentium maxime quia qui quisquam?</p>
+		<p>Third - Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Animi suscipit nam nesciunt voluptate obcaecati repellat ullam itaque! Enim aperiam voluptates, illum dolorem asperiores! Deleniti expedita praesentium maxime quia qui quisquam?</p>
 	</div>
 
 
-	<div id="box2">
-		<p>This is another div!</p>
-	</div>
-
-
-	<button id='cloneBtn'>Clone</button>
+	<button id='replaceAChildBtn'>Replace a Child</button>
+	<button id='replaceBtn'>Replace all</button>
 
 
 	<script>
 		$(document).ready(function(){
-			
+			$('#replaceAChildBtn').click(function(){
+				$('#box p:nth-child(3)').replaceWith('<h2>Ivan Duaneyy</h2>');
+			})
+			$('#replaceBtn').click(function(){
+				$("<h3>Ivan Duane</h3>").replaceAll('#box p');
+			})
 		});		
 	</script>	
 </body>
